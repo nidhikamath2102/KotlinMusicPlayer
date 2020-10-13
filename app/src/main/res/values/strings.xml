@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">KotlinMusicPlayerDemo</string>
+    <string name="acceptpermissions">Kindly accept the permissions!</string>
 </resources>
