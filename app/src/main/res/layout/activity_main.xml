@@ -30,7 +30,9 @@
             android:background="@color/transparent"
             android:textColor="@color/white"
             android:textSize="18sp"
-            android:padding="15dp"/>
+            android:padding="15dp"
+            android:text="Song Name"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/artist"
@@ -38,7 +40,9 @@
             android:layout_height="wrap_content"
             android:background="@color/transparent"
             android:textColor="@color/white"
-            android:text="ABC"/>
+            android:text="Artist"
+            android:padding="15dp"
+            android:gravity="center"/>
 
     </LinearLayout>
 
