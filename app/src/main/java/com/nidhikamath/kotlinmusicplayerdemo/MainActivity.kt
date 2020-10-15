@@ -3,20 +3,17 @@ package com.nidhikamath.kotlinmusicplayerdemo
 import android.Manifest
 import android.content.pm.PackageManager
 import android.media.MediaPlayer
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
-import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.nidhikamath.kotlinmusicplayerdemo.musicjava.FindMusic
 import com.nidhikamath.kotlinmusicplayerdemo.musicjava.Music
-import java.util.*
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     private val PERMISSION_REQUEST_CODE: Int = 21
