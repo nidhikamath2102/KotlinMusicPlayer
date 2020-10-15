@@ -99,7 +99,7 @@ class MainActivity : AppCompatActivity() {
                 initPlayer()
             } else {
                 val myToast = Toast.makeText(applicationContext,resources.getString(R.string.acceptpermissions),Toast.LENGTH_SHORT)
-                myToast.setGravity(Gravity.START,200,200)
+                myToast.setGravity(Gravity.CENTER,0,0)
                 myToast.show()
                 finish()
             }
