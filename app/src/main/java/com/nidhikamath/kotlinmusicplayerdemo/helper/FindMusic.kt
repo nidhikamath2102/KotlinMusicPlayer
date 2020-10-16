@@ -10,9 +10,7 @@ class FindMusic(val contentResolver: ContentResolver) {
     private val random = Random()
     fun prepare() {
         val uri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI
-        val c =
-            contentResolver.query(uri, null, MediaStore.Audio.Media.IS_MUSIC + " = 1", null, null)
-                ?: return
+        val c = contentResolver.query(uri, null, MediaStore.Audio.Media.IS_MUSIC + " = 1", null, null)?: return
         if (!c.moveToFirst()) {
             return
         }

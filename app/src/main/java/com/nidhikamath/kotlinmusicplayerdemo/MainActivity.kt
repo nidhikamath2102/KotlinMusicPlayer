@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         val music = FindMusic(contentResolver)
         music.prepare()
         val musicList = music.allSongs
-        Log.d("TAG", "songs " + musicList?.size + " " )
+        Log.d("TAG", "songs " + musicList.size + " " )
 
         playRandom(musicList)
         shuffle?.setOnClickListener{
