@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import com.nidhikamath.kotlinmusicplayerdemo.musicjava.FindMusic
-import com.nidhikamath.kotlinmusicplayerdemo.musicjava.Music
+import com.nidhikamath.kotlinmusicplayerdemo.helper.FindMusic
+import com.nidhikamath.kotlinmusicplayerdemo.helper.Music
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
         val music = FindMusic(contentResolver)
         music.prepare()
         val musicList = music.allSongs
-        Log.d("TAG", "songs " + musicList.size + " " )
+        Log.d("TAG", "songs " + musicList?.size + " " )
 
         playRandom(musicList)
         shuffle?.setOnClickListener{
@@ -67,15 +67,15 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun playRandom(musicList: MutableList<Music>) {
+    private fun playRandom(musicList: List<Music>) {
         Collections.shuffle(musicList)
         val music = musicList[0]
         mediaPlayer?.reset()
-        mediaPlayer = MediaPlayer.create(this, music.uri)
+        mediaPlayer = MediaPlayer.create(this, music.getURI())
         mediaPlayer?.setOnCompletionListener {
             playRandom(musicList)
         }
-        image?.setImageURI(music.albumArt)
+        image?.setImageURI(music.getAlbumArt())
         songName?.text = music.title
         artist?.text = music.artist
 
